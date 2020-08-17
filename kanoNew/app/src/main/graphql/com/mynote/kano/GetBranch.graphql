@@ -1,0 +1,17 @@
+query GetBranch($owner_name:String!, $repository_name : String!){
+    repository(owner: $owner_name, name: $repository_name) {
+        refs(first: 100, refPrefix:"refs/heads/") {
+            nodes {
+                name
+                target {
+                    ...on Commit {
+                        author {
+                            name
+                        }
+                        oid
+                    }
+                }
+            }
+        }
+    }
+}

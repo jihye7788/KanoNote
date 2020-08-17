@@ -1,0 +1,25 @@
+query GetCommit($owner_name : String!, $repository_name : String!, $branch_name:String!, $month_end:GitTimestamp!, $month_start:GitTimestamp!){
+  repository(name:$repository_name, owner:$owner_name) {
+    ref(qualifiedName: $branch_name) {
+      target {
+        ... on Commit {
+          id
+          history(until:$month_end, since:$month_start) {
+            edges {
+              node {
+                messageHeadline
+                oid
+                message
+                author {
+                  name
+                  email
+                  date
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

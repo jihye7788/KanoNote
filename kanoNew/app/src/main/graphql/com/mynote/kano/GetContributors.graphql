@@ -1,0 +1,14 @@
+query GetContributors ($repository_name:String!, $owner_name:String!){
+  repository(owner: $owner_name, name: $repository_name) {
+    collaborators(last: 20) {
+      edges {
+        node {
+          login
+          name
+          id
+          avatarUrl
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+query WriteComment($owner_name : String!){
+    user(login: $owner_name){
+        id
+        commitComments(first: 30){
+            nodes{
+                bodyText
+                id
+            }
+        }
+        gistComments(first: 30){
+            edges{
+                node{
+                    bodyText
+                    id
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+query getFileSource ($owner_name: String!, $repository_name: String!, $file_oid :GitObjectID!) {
+    repository(owner: $owner_name, name: $repository_name) {
+        object(oid: $file_oid) {
+            ... on Blob {
+                text
+            }
+        }
+    }
+}

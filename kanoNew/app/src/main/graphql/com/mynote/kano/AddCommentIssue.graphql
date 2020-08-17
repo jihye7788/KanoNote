@@ -1,0 +1,14 @@
+mutation AddCommentIssue($myVar: AddCommentInput!) {
+    addComment(input:$myVar){
+        subject{
+            id
+        }
+        commentEdge{
+            node{
+                body
+            }
+        }
+    }
+}
+
+
