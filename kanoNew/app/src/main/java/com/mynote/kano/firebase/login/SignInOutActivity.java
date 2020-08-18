@@ -1,3 +1,4 @@
+/*
 package com.mynote.kano.firebase.login;
 
 import android.content.Intent;
@@ -224,10 +225,12 @@ public class SignInOutActivity extends AppCompatActivity {
         showResult(StatusCode.SUCCESS);
     }
 
-    /**
+    */
+/**
      * An unguessable random string.
      * It is used to protect against cross-site request forgery attacks.
-     */
+     *//*
+
     private String getRandomString() {
 
         return new BigInteger(130, new Random()).toString(32);
@@ -340,4 +343,4 @@ public class SignInOutActivity extends AppCompatActivity {
 
         mAuth.removeAuthStateListener(mAuthListener);
     }
-}
+}*/

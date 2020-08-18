@@ -2,9 +2,4 @@
     <string name="app_name">Kano</string>
     <string name="title_activity_write_diary">wirte_diaryActivity</string>
     <string name="title_activity_calendar">calendarActivity</string>
-
-    <string name="github_client_id">8c5a06603bdeb2f02775</string>
-    <string name="github_client_secret">64fa4a7116bd4cccfedf1ce8c5425a32eca797fb</string>
-    <string name="github_redirect_url">kano://authorization-callback.url</string>
-    <string name="github_token">YOUR GITHUB TOKEN</string>
 </resources>

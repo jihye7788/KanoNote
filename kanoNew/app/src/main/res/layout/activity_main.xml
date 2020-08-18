@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/gitLoginButton"
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/buttonshape"
-        android:gravity="center"
-        android:shadowColor="#C9C9C9"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="ENTER"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/goDatepickBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goDatepick"
+            android:text="goDatepick" />
+
+        <Button
+            android:id="@+id/commitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goCommit"
+            android:text="goCommit" />
+
         <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="252dp"
-        android:gravity="center"
-        android:text="KANO"
-        android:textSize="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

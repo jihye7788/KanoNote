@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        /*setContentView(R.layout.activity_main);
+*/
+        setContentView(R.layout.activity_calendar);//시작화면이 캘린더로 가게 임시고정
 
-
-        Button loginpage_button = (Button) findViewById(R.id.gitLoginButton);
+/*        Button loginpage_button = (Button) findViewById(R.id.gitLoginButton);
         loginpage_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -26,6 +27,6 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
 
-        });
+        });*/
     }
 }

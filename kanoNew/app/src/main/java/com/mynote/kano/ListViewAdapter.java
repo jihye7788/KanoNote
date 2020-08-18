@@ -65,7 +65,6 @@ public class ListViewAdapter extends BaseAdapter {
         return position;
     }
 
-
     // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
     @Override
     public Object getItem(int position) {

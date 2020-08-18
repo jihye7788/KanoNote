@@ -67,7 +67,8 @@ public class calendarActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.goCommitButton);
+   /*     Button button2 = (Button) findViewById(R.id.goCommitButton);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ public class calendarActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
 
     }
 }

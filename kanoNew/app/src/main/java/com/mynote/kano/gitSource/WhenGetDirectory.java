@@ -9,11 +9,11 @@ import com.apollographql.apollo.ApolloCall;
 import com.apollographql.apollo.ApolloClient;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
-import com.mynote.kano.GetBranchQuery;
+import com.mynote.kano.GetDirectoryQuery;
 import com.mynote.kano.R;
 import com.mynote.kano.gitSource.gitConnection.GitConnectApplication;
 
-public class WhenGetBranch extends AppCompatActivity {
+public class WhenGetDirectory extends AppCompatActivity {
 
     public String dataString;
 
@@ -23,10 +23,13 @@ public class WhenGetBranch extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //데이터를 가져오는 방법
-        WhenGetBranch.NewThread newThread = new WhenGetBranch.NewThread();
+        WhenGetDirectory.NewThread newThread = new WhenGetDirectory.NewThread();
         newThread.setDaemon(true);
 
-        newThread.run("jeongjiyoun","chieUniversity");
+        //5월이라고 가정하면,
+
+
+        newThread.run("jeongjiyoun","chieUniversity","master:");
 
         synchronized (newThread) {
             try {
@@ -43,22 +46,23 @@ public class WhenGetBranch extends AppCompatActivity {
 
     //Dirctory
     class NewThread extends Thread {
-        public void run(String owner_name, String repository_name) {
+        public void run(String owner_name, String repository_name, String url) {
 
             GitConnectApplication gitConnectApplication = new GitConnectApplication();
             ApolloClient apolloClient = gitConnectApplication.getApolloClient();
 
-            GetBranchQuery getQuery
-                    = GetBranchQuery.builder()
+            GetDirectoryQuery getQuery
+                    = GetDirectoryQuery.builder()
                     .owner_name(owner_name)
                     .repository_name(repository_name)
+                    .url(url)
                     .build();
 
 
             //loginId를 여기에 넣으시면 됩니다.
-            apolloClient.query(getQuery).enqueue(new ApolloCall.Callback<GetBranchQuery.Data>() {
+            apolloClient.query(getQuery).enqueue(new ApolloCall.Callback<GetDirectoryQuery.Data>() {
                 @Override
-                public void onResponse(Response<GetBranchQuery.Data> response) {
+                public void onResponse(Response<GetDirectoryQuery.Data> response) {
                     //데이터를 가져오는 식
                     String k = response.data().toString();
                     dataString = k;

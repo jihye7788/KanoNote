@@ -11,30 +11,7 @@
         android:theme="@style/AppTheme"
         >
 
-        <activity android:name=".gitSource.WhenGetCommitList"/>
-
-        <activity
-            android:name=".firebase.login.SignInOutActivity"
-            android:launchMode="singleTask">
-        </activity>
-
-        <activity
-            android:name=".firebase.login.RedirectedActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="kano" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".firebase.login.MainActivity">
-        </activity>
-
-        <activity android:name=".fileDirectory.WhenGetDirectory">
+        <activity android:name=".gitSource.WhenGetCommitList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,18 +19,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CListActivity"/>
+        <activity android:name=".gitSource.WhenGetDirectory"></activity>
 
+        <activity android:name=".CListActivity"></activity>
         <activity android:name=".CommitActivity" />
 
         <activity
-            android:name=".firebase.calendar.calendarActivity"
+            android:name=".calendarActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".firebase.calendar.write_diaryActivity"
+            android:name=".write_diaryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
 
-        <activity android:name=".fileDirectory.dListActivity"/>
-        <activity android:name=".fileDirectory.FileDirectory"/>
+        </activity>
     </application>
+
 </manifest>

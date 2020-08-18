@@ -16,7 +16,7 @@ public class RedirectedActivity extends Activity {
         // 2. Users are redirected back to your site by GitHub
         Uri uri = getIntent().getData();
 
-        // Called after the GitHub server redirect us to GITHUB_REDIRECT_URL
+/*        // Called after the GitHub server redirect us to GITHUB_REDIRECT_URL
         if (uri != null && uri.toString().startsWith(getString(R.string.github_redirect_url))) {
 
             Intent intent = new Intent(this, SignInOutActivity.class);
@@ -27,6 +27,6 @@ public class RedirectedActivity extends Activity {
             startActivity(intent);
 
             finish();
-        }
+        }*/
     }
 }
